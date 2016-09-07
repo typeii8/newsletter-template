@@ -1,0 +1,1 @@
+!function(t){"use strict";t("a.page-scroll").bind("click",function(e){var o=t(this);t("html, body").stop().animate({scrollTop:t(o.attr("href")).offset().top-50},1250,"easeInOutExpo"),e.preventDefault()}),t("body").scrollspy({target:".navbar-fixed-top",offset:51})}(jQuery);

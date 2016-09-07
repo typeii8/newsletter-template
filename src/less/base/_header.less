@@ -1,0 +1,49 @@
+// Homepage Header
+
+header {
+    .background-cover;
+    background-position: center;
+    background-image: url('../img/header.jpg');
+    height: 38rem;
+    margin-bottom: 0 !important;
+    position: relative;
+    a {
+        color: @theme-white;
+        &:hover,
+        &:focus {
+            color: @theme-grey;
+        }
+    }
+    h1 {
+        font-size: 3rem;
+        position: absolute;
+        bottom: 2rem;
+        line-height: 1.4;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .topstory {
+        background: @vs-primary;
+        float: right;
+        font-style: italic;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: @theme-white;
+        padding: 0.4rem 2rem;
+        position: relative;
+        top: 5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 38rem;
+        .bg-gradient-fadeout(); 
+    }
+}
+
+

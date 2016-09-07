@@ -1,0 +1,104 @@
+// Global Components
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: @theme-white;
+}
+
+body {
+    .body-font;
+}
+
+a {
+    .transition-all;
+    color: @vs-primary;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: darken(@vs-primary, 10%);
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .header-font;
+    color: @theme-darkblue;
+}
+
+li {
+}
+
+textarea, input {
+}
+
+section {
+    padding: @section-padding 0;
+}
+
+.blockquote {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#news {
+    padding-top: @section-padding/2;
+    .bg-gradient(@theme-deepblue, @theme-darkblue);
+}
+
+#executive-talk {
+    background: @theme-lightgrey;
+}
+
+#finchers {
+    background-color: @theme-white;
+}
+
+#welfare {
+    //min-height: 800px;
+    background: @theme-lightgrey;
+}
+
+// Footer
+#foo {
+    padding: @footer-padding @footer-padding/2;
+    border-bottom: 6px @border-style @vs-primary;
+    background-color: @theme-deepblue;
+    text-align: center;
+    color: @theme-grey;
+    font-weight: 300;
+}
+
+
+// Extras
+// -- Highlight Color Customization
+::-moz-selection {
+    color: @white;
+    text-shadow: none;
+    background: @theme-grey;
+}
+
+::selection {
+    color: @white;
+    text-shadow: none;
+    background: @theme-grey;
+}
+
+img::selection {
+    color: @white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: @white;
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: @theme-grey;
+}

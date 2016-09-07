@@ -1,0 +1,120 @@
+// Mixins
+.transition-all() {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.transition-scale(@scale) {
+    -webkit-transform: scale(@scale);
+    -ms-transform: scale(@scale);
+    transform: scale(@scale);
+}
+
+.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+//Font Family
+.body-font() {
+	font-family: @body-font-family;
+}
+
+.header-font() {
+	font-family: @header-font-family;
+	font-weight: 400;
+}
+
+.border(@width, @style, @color) {
+	border: @width @style @color;
+}
+
+
+// Background Gradient
+.bg-gradient(@color, @colorDark) {
+	background-color: @color;
+	background: -webkit-linear-gradient(@color 0%, @colorDark 100%);
+	background: -o-linear-gradient(@color 0%, @colorDark 100%);
+	background: linear-gradient(@color 0%, @colorDark 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{color}, endColorstr=@{color}, GradientType=0)";
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{color}, endColorstr=@{color}, GradientType=0)";
+}
+
+// Background Gradient
+.bg-gradient-angle(@color, @colorDark) {
+	background-color: @color;
+	background: -webkit-linear-gradient(left top, @color, @colorDark);
+	background: -o-linear-gradient(bottom right, @color, @colorDark);
+    background: -moz-linear-gradient(bottom right, @color, @colorDark);
+	background: linear-gradient(to bottom right, @color, @colorDark); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{color}, endColorstr=@{color}, GradientType=0)";
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{color}, endColorstr=@{color}, GradientType=0)";
+}
+
+.bg-gradient-fadeout() {
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%);
+	background: -o-linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%);
+	background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	
+}
+
+
+//Header position
+.head-transform(@value) {
+	-webkit-transform: translateY(@value);
+	-ms-transform: translateY(@value);
+	transform: translateY(@value);	
+}
+
+
+//Button style
+.button-variant(@color, @background, @border) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+	border-radius: @border-radius;
+	border-style: @border-style;
+	border-width: @border-width;
+	.transition-all;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @theme-white;
+		background-color: @color;
+	    border-color: @color;
+	}
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: @border;
+		}
+	}
+
+	.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
+

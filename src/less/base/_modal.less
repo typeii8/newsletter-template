@@ -1,0 +1,91 @@
+//video-modal
+.modal-content {
+    position: relative;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 0;
+    outline: 0;
+    .modal-header {
+        border-bottom: 0;
+        padding-top: 3rem;
+    }
+    button {
+        margin-top: 3rem; 
+    }
+    .btn-default {
+        margin-top: 1.5rem;
+    }
+}
+.close-modal {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {    
+        opacity: .3;
+    }
+    .lr {
+        z-index: 1051;
+        width: 1px;
+        height: 4rem;
+        margin-left: 1.4rem;
+        background-color: @white;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        .rl {
+            z-index: 1052;
+            width: 1px;
+            height: 4rem;
+            background-color: @white;
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    } 
+}
+
+//article-modal
+.articel-modal {
+    .modal-content {
+        padding: 4.2rem;
+        min-height: 100%;
+        border: 0;
+        border-radius: 0;
+        background-clip: border-box;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: @theme-lightgrey;
+        h1 {
+            margin-bottom: 2rem;
+        }
+        h2, h3 {
+            margin-bottom: 1rem;
+        }
+        .row {
+            margin-bottom: 4rem;    
+        }
+    }
+    .close-modal {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {    
+            opacity: .3;
+        }
+        .lr {
+            background-color: @vs-red;
+            .rl {
+                background-color: @vs-red;
+            }
+        } 
+    }
+}
+

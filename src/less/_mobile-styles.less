@@ -1,0 +1,44 @@
+// ==========================================================================
+// Mobile Custom Styles
+// ==========================================================================
+header {
+    height: 36rem;
+    background-position: right;
+    h1 {
+        bottom: 2rem;
+        font-size: 2.2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .topstory {
+    }
+    &::before {
+        height: 36rem;
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+section {
+    padding: @section-padding/2 0;
+}
+
+.articel-modal {
+    .modal-content {
+        padding: 4.2rem 1rem;
+    }
+}
+
+.articel-modal {
+    .modal-content {
+        -ms-word-break: keep-all;
+        word-break: keep-all;
+
+        // Non standard for webkit
+        word-break: break-word;
+        -webkit-hyphens: auto;
+           -moz-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
+    }
+}
+

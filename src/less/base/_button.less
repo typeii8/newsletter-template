@@ -1,0 +1,30 @@
+// Button Styles
+.btn-default {
+    .button-variant(@theme-grey,transparent,@theme-grey);
+    padding: 0.7rem 5rem;
+}
+
+.btn-primary {
+    .button-variant(@vs-primary,transparent,@vs-primary);
+    padding: 0.7rem 5rem;
+}
+
+.btn-reverse {
+    .button-variant(@theme-white,transparent,@theme-white);
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active,
+    .open > .dropdown-toggle& {
+        color: @theme-white;
+        background-color: @vs-primary;
+        border-color: @vs-primary;
+    }
+}
+
+.btn {
+    .header-font;
+    border-radius: @border-radius;
+    text-transform: uppercase;
+}

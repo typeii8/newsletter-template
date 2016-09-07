@@ -1,0 +1,44 @@
+{
+  "name": "newsletter-template",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "http://typeii8.github.io",
+  "main": "gulpfile.js",
+  "scripts": {
+  },
+  "authors": [
+    "Zoe Huang <typeii8@gmail.com>"
+  ],
+  "description": "",
+  "keywords": [
+    "css",
+    "less",
+    "scss",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "es6-promise": "^3.1.2",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.1.0",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.2",
+    "path": "^0.12.7",
+    "run-sequence": "^1.1.5"
+  }
+}

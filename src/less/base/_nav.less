@@ -1,0 +1,93 @@
+// Navigation
+.navbar {
+    .page-title {
+        .header-font;
+        position: fixed;
+        top: 0;
+        left: 10%;
+        color: @white;
+        font-size: 1.1rem;
+        line-height: 1.3;
+        padding: 0.4rem 0.6rem;
+        .bg-gradient-angle(darken(@vs-primary, 16%), @vs-primary);
+        cursor: pointer;
+        &:focus,
+        &:hover {
+            .bg-gradient-angle(@vs-primary, darken(@vs-primary, 16%));
+        }
+        a {
+            color: @white;
+        }
+    }
+    .collapse {
+        text-align: center;
+    }
+     .navbar-nav {
+        .header-font;
+        display: inline-block;
+        float: none;
+        .nav-link {
+            color: fade(@theme-white, 80%);
+            width: 10rem;
+            &:focus,
+            &:hover {
+                color: @white;    
+            }
+            &.active,
+            &.open {
+                color: @white;
+                &:focus,
+                &:hover {
+                    color: @white;
+                }  
+            } 
+        }
+        .active,
+        .open {
+            > .nav-link {
+                color: @white;
+                &:focus,
+                &:hover {
+                    color: @white;
+                } 
+            }
+        }
+    }
+    .navbar__lang-switcher {
+        list-style: none;
+        a {
+            color: @theme-lightgrey;
+            &:focus,
+            &:hover {
+                color: @theme-grey;
+            } 
+        }
+        li{
+            font-size: 0.6rem;  
+            display: inline-block;
+            padding: 4px;
+            margin-right: 4px;
+            .border(1px, solid, @theme-lightgrey);
+        }
+        .switcher-active {
+            @extend li;
+            color: @white;
+            .border(1px, solid, @theme-grey);
+            background-color: @theme-grey;
+        }
+    }
+    .navbar-toggler {
+        color: @theme-white;
+    }
+}
+
+
+//Use scrollPostStyler.js to fix affix issue in Bootstraps 4
+.sps--abv {
+    background-color: transparent;
+    border-bottom: 1px solid fade(@theme-grey, 25%);
+}
+
+.sps--blw {
+    background-color: fade(@theme-deepblue, 95%);
+}
